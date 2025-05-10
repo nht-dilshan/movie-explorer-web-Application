@@ -13,7 +13,7 @@ import Landing from './pages/Landing';
 import MovieDetails from './pages/MovieDetails';
 import Favorites from './pages/Favorites';
 import Movies from "./pages/Movies";
-import Watchlist from "./pages/watchlist";
+
 
 
 import Navbar from './components/Navbar';

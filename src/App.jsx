@@ -63,10 +63,10 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/movies" element={<Movies />} /> {/* Movies page */}
-        <Route path="/movie/:id" element={<MovieDetails />} /> {/* Movie details page */}
+        <Route path="/movies" element={<Movies />} /> 
+        <Route path="/movie/:id" element={<MovieDetails />} /> 
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/watchlist" element={<Watchlist />} />
+       
       </Routes>
       
     </ThemeProvider>

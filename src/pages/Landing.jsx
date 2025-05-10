@@ -11,7 +11,6 @@ import {
   AppBar,
   Toolbar,
   InputBase,
-  alpha,
   Paper,
 } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";

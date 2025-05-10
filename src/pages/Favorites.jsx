@@ -24,16 +24,13 @@ import Footer from "../components/Footer";
 import MovieIcon from '@mui/icons-material/Movie';
 import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useNavigate } from "react-router-dom";
 
 const Favorites = () => {
   const { favorites, removeFavorite } = useContext(MovieContext);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [removedMovie, setRemovedMovie] = useState(null);
   const theme = useTheme();
-  const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   
   const handleRemove = (movie) => {
     setRemovedMovie(movie.title);

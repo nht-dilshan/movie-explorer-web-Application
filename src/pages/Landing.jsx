@@ -20,10 +20,9 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import Footer from "../components/Footer";
 import axios from "axios";
-import MovieCard from "../components/MovieCard"; // Import your MovieCard component
-import { MovieProvider } from "../context/MovieContext"; // Import your context provider
+import MovieCard from "../components/MovieCard"; 
+import { MovieProvider } from "../context/MovieContext"; 
 
-// Featured Movie Component
 function FeaturedMovie({ movie, navigate }) {
   return (
     <Paper
@@ -79,16 +78,13 @@ export default function LandingPage() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        // Fetch popular movies
         const popularRes = await axios.get(
           `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_TMDB_API_KEY}`
         );
         setPopularMovies(popularRes.data.results);
         
-        // Set featured movie (first popular movie)
         setFeaturedMovie(popularRes.data.results[0]);
         
-        // Fetch top rated movies
         const topRatedRes = await axios.get(
           `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_API_KEY}`
         );
@@ -116,10 +112,8 @@ export default function LandingPage() {
       <CssBaseline />
 
       <Container maxWidth="lg" sx={{ pt: 4 }}>
-        {/* Featured Movie Section */}
         {featuredMovie && <FeaturedMovie movie={featuredMovie} />}
 
-        {/* Popular Movies Section */}
         <Box sx={{ position: "relative", my: 5 }}>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: 700, mb: 3 }}>
             Popular Movies
@@ -184,7 +178,6 @@ export default function LandingPage() {
           </IconButton>
         </Box>
 
-        {/* Top Rated Movies Section */}
         <Box sx={{ position: "relative", my: 5 }}>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: 700, mb: 3 }}>
             Top Rated Movies
